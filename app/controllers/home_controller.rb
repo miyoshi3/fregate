@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   def work
   end
 
+
   def about
   end
 

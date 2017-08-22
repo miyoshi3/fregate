@@ -21,12 +21,27 @@
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 17,
               center: uluru
+
             });
             var marker = new google.maps.Marker({
               position: uluru,
               map: map
             });
-          }
+
+
+            var mapStyle = [
+                {
+                  "stylers": [
+                    { "saturation": -100 }
+                  ]
+                }
+            ];
+
+            var mapType = new google.maps.StyledMapType(mapStyle);
+            map.mapTypes.set('GrayScaleMap', mapType);
+            map.setMapTypeId('GrayScaleMap');
+        }
+
 
 
         </script>
@@ -34,5 +49,8 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpUph4xUdhpL79ki19dtnHPoPczz6ca68&callback=initMap">
         </script>
         <br>
-        <p>〒100-0011 東京都渋谷区恵比寿1-1-11</p>
+        <p>〒100-0011 東京都渋谷区恵比寿1-1-11
+        <br>
+        T : 03-333-8888
+        </p>
       </body>
